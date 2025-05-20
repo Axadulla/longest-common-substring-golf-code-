@@ -1,4 +1,1 @@
-s=process.argv.slice(2);r=""
-if(s.length){m=s[0].length;outer:for(l=m;l;l--)for(i=0;i<=m-l;i++){t=s[0].slice(i,i+l)
-if(s.every(x=>x.includes(t))){r=t;break outer}}}
-console.log(r)
+[,,...s]=process.argv;r="";if(s[0]){a=s[0],m=a.length;for(l=m;l;--l)for(i=0;i<=m-l;i++){t=a.slice(i,i+l);if(!s.some(x=>!x.includes(t))){r=t;l=0;break}}}console.log(r)
